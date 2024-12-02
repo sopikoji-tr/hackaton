@@ -1,0 +1,29 @@
+<div class="page-container">
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <mat-form-field appearance="outline">
+        <mat-label>Branch Name</mat-label>
+        <input matInput placeholder="Enter your branch for check" />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Enter your email to be updated" />
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" class="search-button">
+        Request
+      </button>
+    </div>
+  
+    <!-- Expandable Sections -->
+    <div class="expansion-panel-group">
+      <mat-expansion-panel *ngFor="let item of items">
+        <mat-expansion-panel-header>
+          {{ item.title }}
+        </mat-expansion-panel-header>
+        <p>{{ item.content }}</p>
+      </mat-expansion-panel>
+    </div>
+  </div>
+  

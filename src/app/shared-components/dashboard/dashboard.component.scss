@@ -1,0 +1,34 @@
+.page-container {
+    padding: 16px; // Padding on both sides
+    @media (min-width: 600px) {
+      padding: 32px; // Larger padding for wider screens
+    }
+  
+    .search-bar {
+      display: flex;
+      flex-wrap: wrap;
+      width: 70%;
+      gap: 16px;
+      margin: auto;
+  
+      mat-form-field {
+        flex: 1; // Inputs take equal space
+      }
+  
+      .search-button {
+        height: 56px; // Matches Material input height
+      }
+    }
+  
+    .expansion-panel-group {
+      mat-expansion-panel {
+        margin-bottom: 8px;
+  
+        mat-expansion-panel-header {
+          font-size: 16px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  
