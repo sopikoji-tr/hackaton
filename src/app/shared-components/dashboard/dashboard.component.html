@@ -20,10 +20,12 @@
     <div class="expansion-panel-group">
       <mat-expansion-panel *ngFor="let item of items">
         <mat-expansion-panel-header>
-          {{ item.title }}
-        </mat-expansion-panel-header>
-        <p>{{ item.content }}</p>
-      </mat-expansion-panel>
-    </div>
+        {{ item.title }}
+        </mat-expansion-panel-header>  
+        <pre>
+            <code class="language-javascript" [innerHTML]="item.content"></code>
+        </pre>
+        </mat-expansion-panel>
+        </div>
   </div>
   
