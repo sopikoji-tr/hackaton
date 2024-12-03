@@ -1,1 +1,26 @@
-<p>log-detail works!</p>
+<div class="expansion-panel-group">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header [ariaExpanded]="true">
+          <mat-checkbox
+              [checked]=""
+              (click)="$event.stopPropagation()">
+              <p class="title">
+                  {{ log.id }}
+              </p>
+          </mat-checkbox>
+      </mat-expansion-panel-header>  
+      <pre class="underline pre-background-bisque">
+          {{ log.error_message}}
+      </pre>
+      <pre>
+          <code class="language-javascript" [innerHTML]="log.code_snippet"></code>
+      </pre>
+      <pre class="pre-background-grey"><h3>
+        Suggestions:
+        </h3>
+          {{ log.suggestion}}
+      </pre>
+      <pre class="ai-chat-box"><button mat-flat-button class="ai-btn" color="primary">Ask AI</button>
+        <textarea class="textarea-size"></textarea></pre>
+      </mat-expansion-panel>
+      </div>

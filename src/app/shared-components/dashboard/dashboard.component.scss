@@ -42,6 +42,18 @@ pre code {
     word-wrap: break-word;
   }
 
+  .title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 340px;
+  }
+
+  .underline {
+    border-bottom: 1px solid #f05858;
+  }
+
+  
 .table-container {
   margin: 20px;
   overflow-x: auto;
