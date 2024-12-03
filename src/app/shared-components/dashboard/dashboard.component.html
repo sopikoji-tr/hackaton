@@ -74,7 +74,7 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
     <!-- Expanded Row -->
-    <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="expanded-row" [hidden]="!isExpanded(row)">
+    <tr mat-row *matRowDef="let row; columns: ['expandedDetail'];  when: isExpandedRow" class="expanded-row" [hidden]="!isExpanded(row)">
       <td [attr.colspan]="displayedColumns.length">
         <app-log-detail [log]="row"></app-log-detail>
       </td>

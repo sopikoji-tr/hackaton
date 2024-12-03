@@ -55,6 +55,10 @@ export class DashboardComponent implements AfterViewInit{
     return this.expandedRow === log;
   }
 
+  isExpandedRow = (index: number, row: LogInterface) => {
+    return this.expandedRow === row;
+  };
+
   items = [
     { title: 'src/app/shared-components/dashboard/dashboard.component.ts', content: 'Content for section 1' },
     { title: 'src/app/shared-components/dashboard/dashboard.component.ts', content: 'Content for section 2' },
