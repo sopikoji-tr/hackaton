@@ -6,21 +6,44 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatListModule } from '@angular/material/list';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { LogInComponent } from './log-in/log-in.component';
 
 @NgModule({
     declarations: [
-        DashboardComponent
+        DashboardComponent,
+        NavigationBarComponent,
+        LogInComponent
     ],
-    imports: [
-        CommonModule,
-        BrowserAnimationsModule,
-        MatButtonModule,
-        MatIconModule,
-        MatInputModule, 
-        MatExpansionModule
-    ],
-    exports: [
-        DashboardComponent
-    ]
+  imports: [
+    CommonModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatInputModule,
+    MatExpansionModule,
+    MatTabsModule,
+    MatListModule,
+    RouterLink,
+    RouterLinkActive,
+    RouterOutlet
+  ],
+  exports: [
+    DashboardComponent,
+    NavigationBarComponent,
+    LogInComponent,
+    MatButtonModule,
+    MatIconModule,
+    MatInputModule,
+    MatExpansionModule,
+    MatTabsModule,
+    MatListModule,
+    RouterLink,
+    RouterLinkActive,
+    RouterOutlet
+  ]
 })
 export class SharedComponentsModule { }
