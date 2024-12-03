@@ -4,6 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedComponentsModule } from './shared-components/shared-components.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { MainUrlInterceptor } from './interceptors/main-url.interceptor';
 
 
 @NgModule({
@@ -16,7 +18,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     SharedComponentsModule,
   ],
-  providers: [],
+  providers: [
+    {
+    provide: HTTP_INTERCEPTORS,
+    useClass: MainUrlInterceptor,
+    multi: true, // Allows multiple interceptors if needed
+  },
+],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

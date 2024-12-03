@@ -1,6 +1,7 @@
 <div class="expansion-panel-group" *ngIf="log">
-    <mat-expansion-panel>
-      <mat-expansion-panel-header [ariaExpanded]="true">
+    <mat-expansion-panel> 
+        <!-- [expanded]="true" -->
+      <mat-expansion-panel-header>
           <mat-checkbox
               [checked]=""
               (click)="$event.stopPropagation()">
