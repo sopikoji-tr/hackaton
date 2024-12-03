@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { LogInterface } from '../models/log.interface';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
     providedIn: 'root'
@@ -25,23 +26,13 @@ export class MainService {
         },
       ];
     
-    constructor() {
-this.logs[0].error_message = `Warning:   161:36  warning  Do not access Object.prototype method 'hasOwnProperty' from target object                                                                                                          no-prototype-builtins
+    constructor(private http: HttpClient) {
+    }
 
-/home/runner/_work/etoro-assets/etoro-assets/etoro/apps/etoro/src/app/user/ui/user-mobile-header/user-mobile-header.component.spec.ts
-  5:1  warning  Static imports of lazy-loaded libraries are forbidden.
-
-Library "discovery" is lazy-loaded in these files:
-- apps/etoro/src/app/routes/discover.ts  @nx/enforce-module-boundaries
-
-/home/runner/_work/etoro-assets/etoro-assets/etoro/apps/etoro/src/app/user/ui/user-mobile-header/user-mobile-header.component.ts
-  15:1  warning  Static imports of lazy-loaded libraries are forbidden.
-
-Library "discovery" is lazy-loaded in these files:
-- apps/etoro/src/app/routes/discover.ts  @nx/enforce-module-boundaries`;
-
-     }
-
+    // getLogs() {
+    //     return this.http.get('/api/error-and-code'); // Automatically converted to 'http://localhost:8000/api/error-and-code'
+    //   }
+    
     getLogs(): LogInterface [] {
         return this.logs;
     }
