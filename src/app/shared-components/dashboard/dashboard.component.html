@@ -15,29 +15,6 @@
         Request
       </button>
     </div>
-
-    <!-- Expandable Sections -->
-    <div class="expansion-panel-group">
-      <mat-expansion-panel *ngFor="let item of items">
-        <mat-expansion-panel-header>
-            <mat-checkbox
-                [checked]=""
-                (click)="$event.stopPropagation()">
-                <p class="title">
-                    {{ item.title }}
-                </p>
-            </mat-checkbox>
-
-        </mat-expansion-panel-header>  
-        <pre class="underline">
-            Error
-        </pre>
-        <pre>
-            <code class="language-javascript" [innerHTML]="item.snippet"></code>
-        </pre>
-
-        </mat-expansion-panel>
-        </div>
   </div>
 
 <!-- table>-->
@@ -111,3 +88,5 @@
   <mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
 </div>
 
+
+<app-log-detail></app-log-detail>

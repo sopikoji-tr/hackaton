@@ -1,0 +1,30 @@
+pre {
+    overflow-y: auto;
+    max-height: 300px;
+    border-radius: 5px;
+}
+
+.pre-background-bisque {
+    background-color: bisque;
+}
+
+.pre-background-grey {
+    background-color: rgb(220, 220, 220);
+}
+
+h3 {
+    margin: 0px;
+}
+.textarea-size {
+    width: 95%;
+    height: 200px;
+    color: cadetblue;
+}
+
+.ai-chat-box {
+    display: flex;
+}
+
+.ai-btn {
+    margin-right: 5px;
+}
