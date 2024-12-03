@@ -53,7 +53,7 @@ pre code {
     border-bottom: 1px solid #f05858;
   }
 
-  
+
 .table-container {
   margin: 20px;
   overflow-x: auto;
@@ -63,18 +63,58 @@ pre code {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 200px; /* Adjust based on requirement */
+  max-width: 50px;
 }
 
-mat-row.expanded {
-  background-color: #4B5974; /* Example styling to make it visible */
+.regular-column {
+  width: 40px;
 }
 
-.expanded-row {
-  background-color: lightblue; /* Example of adding visual feedback */
+table {
+  width: 100%;
 }
 
-tr.mat-row.expanded {
-  background-color: lightgray;
+tr.example-detail-row {
+  height: 0;
+}
+
+tr.example-element-row:not(.example-expanded-row):hover {
+  background: whitesmoke;
+}
+
+tr.example-element-row:not(.example-expanded-row):active {
+  background: #efefef;
+}
+
+//.example-element-row td {
+//  border-bottom-width: 0;
+//}
+
+.example-element-detail {
+  overflow: hidden;
+  display: flex;
+}
+
+.example-element-diagram {
+  min-width: 80px;
   border: 2px solid black;
+  padding: 8px;
+  font-weight: lighter;
+  margin: 8px 0;
+  height: 104px;
 }
+
+.example-element-symbol {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: normal;
+}
+
+.example-element-description {
+  padding: 16px;
+}
+
+.example-element-description-attribution {
+  opacity: 0.5;
+}
+
