@@ -11,12 +11,17 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatListModule } from '@angular/material/list';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { LogInComponent } from './log-in/log-in.component';
+import { SearchComponent } from './search/search.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
     declarations: [
         DashboardComponent,
         NavigationBarComponent,
-        LogInComponent
+        LogInComponent,
+        SearchComponent
     ],
   imports: [
     CommonModule,
@@ -29,7 +34,10 @@ import { LogInComponent } from './log-in/log-in.component';
     MatListModule,
     RouterLink,
     RouterLinkActive,
-    RouterOutlet
+    RouterOutlet,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule
   ],
   exports: [
     DashboardComponent,
