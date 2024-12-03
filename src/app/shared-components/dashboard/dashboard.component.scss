@@ -118,3 +118,19 @@ tr.example-element-row:not(.example-expanded-row):active {
   opacity: 0.5;
 }
 
+th {
+  background-color: #4B5974 !important;
+  color: white;
+}
+
+.mat-mdc-cell{
+  max-width: 100px ;
+}
+
+tr.resolved {
+  background-color: darkseagreen !important;
+}
+
+tr.open {
+  background-color: indianred !important;
+}

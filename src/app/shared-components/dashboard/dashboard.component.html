@@ -68,11 +68,12 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let element; columns: displayedColumns;"
       class="example-element-row"
+      [ngClass]="element.status ==='Open' ? 'open' : 'resolved'"
       [class.example-expanded-row]="expandedRow === element"
       (click)=toggleRow(element)>
   </tr>
 
-    <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+  <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
 
 </table>
 
