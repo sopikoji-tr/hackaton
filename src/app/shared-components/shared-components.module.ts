@@ -16,13 +16,15 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+//import { LogDetailComponent } from './log-detail/log-detail.component';
 
 @NgModule({
     declarations: [
         DashboardComponent,
         NavigationBarComponent,
         LogInComponent,
-        SearchComponent
+        SearchComponent,
+       // LogDetailComponent
     ],
   imports: [
     CommonModule,
