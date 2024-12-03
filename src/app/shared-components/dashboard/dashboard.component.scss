@@ -41,3 +41,14 @@ pre code {
     white-space: pre-wrap; /* Allows code to wrap within the block */
     word-wrap: break-word;
   }
+
+  .title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 340px;
+  }
+
+  .underline {
+    border-bottom: 1px solid #f05858;
+  }

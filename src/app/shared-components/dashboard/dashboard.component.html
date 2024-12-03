@@ -20,11 +20,22 @@
     <div class="expansion-panel-group">
       <mat-expansion-panel *ngFor="let item of items">
         <mat-expansion-panel-header>
-        {{ item.title }}
-        </mat-expansion-panel-header>
-        <pre>
-            <code class="language-javascript" [innerHTML]="item.content"></code>
+            <mat-checkbox
+                [checked]=""
+                (click)="$event.stopPropagation()">
+                <p class="title">
+                    {{ item.title }}
+                </p>
+            </mat-checkbox>
+
+        </mat-expansion-panel-header>  
+        <pre class="underline">
+            Error
         </pre>
+        <pre>
+            <code class="language-javascript" [innerHTML]="item.snippet"></code>
+        </pre>
+
         </mat-expansion-panel>
         </div>
   </div>

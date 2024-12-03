@@ -42,14 +42,20 @@ export class DashboardComponent implements AfterViewInit{
 
 
   items = [
-    { title: 'src/app/shared-components/dashboard/dashboard.component.ts', content: 'Content for section 1' },
-    { title: 'src/app/shared-components/dashboard/dashboard.component.ts', content: 'Content for section 2' },
-    { title: 'src/app/shared-components/dashboard/dashboard.component.ts', content: 'Content for section 3' },
+    { title: 'src/app/shared-components/dashboard/dashboard.component.ts', snippet: 'Content for section 1' },
+    { title: 'src/app/shared-components/dashboard/dashboard.component.ts', snippet: 'Content for section 2' },
+    { title: 'src/app/shared-components/dashboard/dashboard.component.ts', snippet: 'Content for section 3' },
   ];
 
   ngOnInit() {
-    this.items[0].content = `
-    ngAfterViewInit() {
+    this.items[0].snippet = `
+    ngAfterViewInit() { 
+        Prism.highlightAll();  // Highlights all <code> blocks
+    }
+     ngAfterViewInit() { 
+        Prism.highlightAll();  // Highlights all <code> blocks
+    }
+         ngAfterViewInit() { 
         Prism.highlightAll();  // Highlights all <code> blocks
     }`;
 
