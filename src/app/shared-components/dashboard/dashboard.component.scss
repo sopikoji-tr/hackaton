@@ -3,27 +3,27 @@
     @media (min-width: 600px) {
       padding: 32px; // Larger padding for wider screens
     }
-  
+
     .search-bar {
       display: flex;
       flex-wrap: wrap;
       width: 70%;
       gap: 16px;
       margin: auto;
-  
+
       mat-form-field {
         flex: 1; // Inputs take equal space
       }
-  
+
       .search-button {
         height: 56px; // Matches Material input height
       }
     }
-  
+
     .expansion-panel-group {
       mat-expansion-panel {
         margin-bottom: 8px;
-  
+
         mat-expansion-panel-header {
           font-size: 16px;
           font-weight: 500;
@@ -31,7 +31,7 @@
       }
     }
   }
-  
+
 
 pre code {
     font-family: "Courier New", Courier, monospace;
@@ -41,3 +41,15 @@ pre code {
     white-space: pre-wrap; /* Allows code to wrap within the block */
     word-wrap: break-word;
   }
+
+.table-container {
+  margin: 20px;
+  overflow-x: auto;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px; /* Adjust based on requirement */
+}
