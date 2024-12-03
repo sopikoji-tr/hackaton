@@ -15,6 +15,7 @@ import { MatSort } from '@angular/material/sort';  // Add other languages if nee
 export class DashboardComponent implements AfterViewInit{
   displayedColumns: string[] = ['id', 'code_snippet', 'error_message', 'suggestion', 'created_at', 'status'];
   dataSource: MatTableDataSource<LogInterface>;
+  expandedRow: LogInterface | null = null;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
@@ -28,7 +29,14 @@ export class DashboardComponent implements AfterViewInit{
       created_at: '2024-12-02',
       status: 'Open',
     },
-    // Add more sample data here
+    {
+      id: 2,
+      code_snippet: 'let x = 5; console.log(x)',
+      error_message: 'No error',
+      suggestion: 'None needed',
+      created_at: '2024-12-03',
+      status: 'Resolved',
+    },
   ];
 
   constructor() {
@@ -39,7 +47,13 @@ export class DashboardComponent implements AfterViewInit{
     Prism.highlightAll(); // Highlights all <code> blocks
   }
 
+  toggleRow(log: LogInterface): void {
+    this.expandedRow = this.expandedRow === log ? null : log;
+  }
 
+  isExpanded(log: LogInterface): boolean {
+    return this.expandedRow === log;
+  }
 
   items = [
     { title: 'src/app/shared-components/dashboard/dashboard.component.ts', snippet: 'Content for section 1' },
