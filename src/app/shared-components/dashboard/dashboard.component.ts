@@ -13,9 +13,10 @@ import { MatSort } from '@angular/material/sort';  // Add other languages if nee
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements AfterViewInit{
-  displayedColumns: string[] = ['id', 'code_snippet', 'error_message', 'suggestion', 'created_at', 'status'];
+  displayedColumns: string[] = ['id', 'code_snippet', 'error_message', 'suggestion', 'created_at', 'status', 'expand'];
   dataSource: MatTableDataSource<LogInterface>;
   expandedRow: LogInterface | null = null;
+  expandedRowId: number | null = null;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
@@ -49,15 +50,13 @@ export class DashboardComponent implements AfterViewInit{
 
   toggleRow(log: LogInterface): void {
     this.expandedRow = this.expandedRow === log ? null : log;
+    this.expandedRowId = this.expandedRowId === log.id ? null : log.id;
+    console.log('conksks', this.expandedRow);
   }
 
-  isExpanded(log: LogInterface): boolean {
-    return this.expandedRow === log;
+  isRowExpanded(logId?: number): boolean {
+    return this.expandedRowId === logId;
   }
-
-  isExpandedRow = (index: number, row: LogInterface) => {
-    return this.expandedRow === row;
-  };
 
   items = [
     { title: 'src/app/shared-components/dashboard/dashboard.component.ts', content: 'Content for section 1' },

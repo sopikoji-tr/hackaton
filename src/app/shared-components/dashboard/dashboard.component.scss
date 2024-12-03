@@ -53,3 +53,16 @@ pre code {
   text-overflow: ellipsis;
   max-width: 200px; /* Adjust based on requirement */
 }
+
+mat-row.expanded {
+  background-color: #4B5974; /* Example styling to make it visible */
+}
+
+.expanded-row {
+  background-color: lightblue; /* Example of adding visual feedback */
+}
+
+tr.mat-row.expanded {
+  background-color: lightgray;
+  border: 2px solid black;
+}
