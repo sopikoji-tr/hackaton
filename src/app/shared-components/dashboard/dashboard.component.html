@@ -37,7 +37,7 @@
 
   <ng-container matColumnDef="error_message">
     <th mat-header-cell *matHeaderCellDef mat-sort-header>Error Message</th>
-    <td mat-cell *matCellDef="let log">{{ log.error_message }}</td>
+    <td mat-cell *matCellDef="let log"> <div class="truncate">{{ log.error_message }}</div></td>
   </ng-container>
 
   <ng-container matColumnDef="suggestion">
@@ -69,11 +69,7 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
     <!-- Expanded Row -->
-    <tr mat-row *matRowDef="let row; columns: ['expandedDetail'];  when: isExpandedRow" class="expanded-row" [hidden]="!isExpanded(row)">
-      <td [attr.colspan]="displayedColumns.length">
-        <app-log-detail [log]="row"></app-log-detail>
-      </td>
-    </tr>
+
   </table>
 
   <!-- Paginator -->

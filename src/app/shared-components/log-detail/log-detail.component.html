@@ -1,4 +1,4 @@
-<div class="expansion-panel-group">
+<div class="expansion-panel-group" *ngIf="log">
     <mat-expansion-panel>
       <mat-expansion-panel-header [ariaExpanded]="true">
           <mat-checkbox
@@ -8,7 +8,7 @@
                   {{ log.id }}
               </p>
           </mat-checkbox>
-      </mat-expansion-panel-header>  
+      </mat-expansion-panel-header>
       <pre class="underline pre-background-bisque">
           {{ log.error_message}}
       </pre>
