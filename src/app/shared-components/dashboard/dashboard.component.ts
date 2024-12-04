@@ -22,7 +22,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
   ],
 })
 export class DashboardComponent implements AfterViewInit{
-  displayedColumns: string[] = ['id', 'code_snippet', 'error_message', 'suggestion', 'created_at', 'status'];
+  displayedColumns: string[] = ['id', 'application_name', 'code_snippet', 'error_message', 'suggestion', 'created_at', 'status'];
   dataSource!: MatTableDataSource<LogInterface>;
   expandedRow: LogInterface | null = null;
   expandedRowId: number | null = null;

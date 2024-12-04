@@ -30,6 +30,11 @@
     <td mat-cell class="regular-column" *matCellDef="let element">{{element.id}}</td>
   </ng-container>
 
+  <ng-container matColumnDef="application_name">
+    <th mat-header-cell *matHeaderCellDef class="regular-column">Application Name</th>
+    <td mat-cell class="regular-column" *matCellDef="let element">{{element.application_name}}</td>
+  </ng-container>
+
   <ng-container matColumnDef="code_snippet">
     <th mat-header-cell *matHeaderCellDef class="truncate">Code Snippet</th>
     <td mat-cell class="truncate" *matCellDef="let element">{{element.code_snippet}}</td>
@@ -68,7 +73,7 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let element; columns: displayedColumns;"
       class="example-element-row"
-      [ngClass]="element.status ==='Open' ? 'open' : 'resolved'"
+      [ngClass]="element.status ==='Resolved' ? 'resolved' : 'open'"
       [class.example-expanded-row]="expandedRow === element"
       (click)=toggleRow(element)>
   </tr>
