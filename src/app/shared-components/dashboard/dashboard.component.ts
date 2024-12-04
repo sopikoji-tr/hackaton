@@ -23,7 +23,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 })
 export class DashboardComponent implements AfterViewInit{
   displayedColumns: string[] = ['id', 'code_snippet', 'error_message', 'suggestion', 'created_at', 'status'];
-  dataSource: MatTableDataSource<LogInterface>;
+  dataSource!: MatTableDataSource<LogInterface>;
   expandedRow: LogInterface | null = null;
   expandedRowId: number | null = null;
 
@@ -31,7 +31,8 @@ export class DashboardComponent implements AfterViewInit{
   @ViewChild(MatSort) sort!: MatSort;
 
   constructor(private mainService: MainService) {
-    this.dataSource = new MatTableDataSource(this.mainService.getLogs());
+    this.mainService.getLogs().subscribe((logs: any) => {this.dataSource = new MatTableDataSource(logs);});
+    // this.dataSource = new MatTableDataSource(this.mainService.getLogs());
   }
 
   ngAfterViewInit() {

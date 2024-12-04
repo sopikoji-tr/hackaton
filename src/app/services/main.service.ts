@@ -29,11 +29,11 @@ export class MainService {
     constructor(private http: HttpClient) {
     }
 
-    // getLogs() {
-    //     return this.http.get('/api/error-and-code'); // Automatically converted to 'http://localhost:8000/api/error-and-code'
-    //   }
+    getLogs() {
+        return this.http.get('/api/error-and-code'); // Automatically converted to 'http://localhost:8000/api/error-and-code'
+      }
     
-    getLogs(): LogInterface [] {
-        return this.logs;
-    }
+    // getLogs(): LogInterface [] {
+    //     return this.logs;
+    // }
 }
